@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>个热门博客</title>
+    <style></style>
+</head>
+<body>
+    <div>
+        <ul>
+            <li>欢迎来到此人博客</li>
+            <li><a href=""></a></li>
+            <li><a href="{{ url_for('login') }}">登录|注册</a></li>
+        </ul>
+    </div>
+    <div>
+        {% for info in res %}
+            <h1>{{ info[0] }}</h1>
+            <hr>
+            <textarea cols="100">{{ info[2] }}</textarea>
+            <hr>
+            <b>{{ info[1] }}</b>
+            <br>
+        {% endfor %}
+    </div>
+
+</body>
+</html>
